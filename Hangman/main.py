@@ -5,12 +5,11 @@ from do_while import doWhile
 import cowsay
 
 def read():
-    list=[]
+    lista=[]
     with open("../DataBase/data.txt","r",encoding="utf-8") as f:
         for line in f:
-            list.append(line)
-
-        chosen_word=list[random.randint(1,170)]
+            lista.append(line)
+        chosen_word=random.choice(lista)
         chosen_word=chosen_word.strip()
         return chosen_word
 
